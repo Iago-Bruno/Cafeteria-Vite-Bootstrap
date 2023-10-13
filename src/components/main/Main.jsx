@@ -1,19 +1,17 @@
-import { useState } from 'react';
-import { Container, Row, Table } from 'react-bootstrap';
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
+import { useState } from "react";
+import { Container, Row, Table } from "react-bootstrap";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-import UsersData from '../../dataSet/UsersData';
-import CoffeeCarouselData from '../../dataSet/CoffeeCarouselData';
-import CoffeeCardData from '../../dataSet/CoffeeCardData';
+import UsersData from "../../dataSet/UsersData";
+import CoffeeCarouselData from "../../dataSet/CoffeeCarouselData";
+import CoffeeCardData from "../../dataSet/CoffeeCardData";
 
-import CoffeeCarousel from './components/Carousel';
-import CoffeeCard from './components/CoffeeCard';
+import CoffeeCarousel from "./components/Carousel";
+import CoffeeCard from "./components/CoffeeCard";
 
-import './Main.css';
+import "./Main.css";
 
 const Main = () => {
-  const [users, setUsers] = useState(UsersData);
-
   return (
     <Container className="main py-3">
       <Container className="main-carousel">
@@ -38,7 +36,7 @@ const Main = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => {
+            {UsersData.map((user, index) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
@@ -46,22 +44,32 @@ const Main = () => {
                   <td>{user.username}</td>
                   <td>{user.email}</td>
                   <td>
-                    {user.address.street}, {user.address.city},{' '}
+                    {user.address.street}, {user.address.city},{" "}
                     {user.address.suite}, {user.address.zipcode}
                   </td>
-                  <td style={{ position: 'relative' }}>
+                  <td style={{ maxHeight: "400px" }}>
                     <MapContainer
-                      center={[51.51, -0.08]}
+                      center={[user.address.geo.lat, user.address.geo.lng]}
                       zoom={13}
-                      scrollWheelZoom={false}
+                      style={{
+                        width: "300px",
+                        height: "200px",
+                      }}
                     >
                       <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                       />
-                      <Marker position={[51.51, -0.08]}>
-                        <Popup>
-                          A pretty CSS3 popup. <br /> Easily customizable.
+                      <Marker
+                        position={[user.address.geo.lat, user.address.geo.lng]}
+                      >
+                        <Popup maxWidth={200}>
+                          <h4 style={{ fontSize: "16px", fontWeight: "bold" }}>
+                            {user.company.name}
+                          </h4>
+                          <h6 style={{ fontSize: "12px" }}>
+                            {user.company.catchPhrase} <br /> {user.company.bs}
+                          </h6>
                         </Popup>
                       </Marker>
                     </MapContainer>
