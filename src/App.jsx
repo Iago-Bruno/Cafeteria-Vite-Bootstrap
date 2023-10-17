@@ -1,15 +1,18 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
-import Header from './components/header/Header';
+import Header from "./components/header/Header";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   return (
     <>
       <Header />
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
     </>
   );
 }

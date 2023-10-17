@@ -6,8 +6,10 @@ import {
   NavDropdown,
   Form,
   Button,
-} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+import "./Header.css";
 
 const Header = () => {
   const expand = true;
@@ -30,11 +32,22 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link>
-                  <Link to={'/cardapio'}>Cardapio</Link>
+                  <Link className="nav_link" to={"/"}>
+                    Home
+                  </Link>
                 </Nav.Link>
-
+                <Nav.Link>
+                  <Link className="nav_link" to={"/cardapio"}>
+                    Cardapio
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="nav_link" to={"/sobre"}>
+                    Sobre
+                  </Link>
+                </Nav.Link>
+                {/* 
                 <NavDropdown
                   title="Dropdown"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -47,9 +60,9 @@ const Header = () => {
                   <NavDropdown.Item href="#action5">
                     Something else here
                   </NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
               </Nav>
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
                 <Form.Control
                   type="search"
                   placeholder="Search"
@@ -57,7 +70,7 @@ const Header = () => {
                   aria-label="Search"
                 />
                 <Button variant="outline-success">Search</Button>
-              </Form>
+              </Form> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
