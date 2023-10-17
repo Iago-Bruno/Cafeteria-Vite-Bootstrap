@@ -7,6 +7,7 @@ import CoffeeCarouselData from '../../dataSet/CoffeeCarouselData';
 import CoffeeCardData from '../../dataSet/CoffeeCardData';
 
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -22,7 +23,9 @@ function Home() {
             })}
           </Row>
         </Container>
-        <Container className="mt-4"></Container>
+        {/* <Container className="mt-4">
+          <Link to={'/cardapio'}>Cardapio</Link>
+        </Container> */}
       </Container>
     </>
   );

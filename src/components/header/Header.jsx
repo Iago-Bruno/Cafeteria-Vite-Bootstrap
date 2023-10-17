@@ -30,8 +30,11 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link>Home</Nav.Link>
-                <Nav.Link>Cardápio</Nav.Link>
+                <Nav.Link href="#action1">Home</Nav.Link>
+                <Nav.Link>
+                  <Link to={'/cardapio'}>Cardapio</Link>
+                </Nav.Link>
+
                 <NavDropdown
                   title="Dropdown"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
