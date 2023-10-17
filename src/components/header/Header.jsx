@@ -6,10 +6,11 @@ import {
   NavDropdown,
   Form,
   Button,
-} from "react-bootstrap";
+} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const expand = false;
+  const expand = true;
 
   return (
     <header className="header">
@@ -29,8 +30,8 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
+                <Nav.Link>Home</Nav.Link>
+                <Nav.Link>Cardápio</Nav.Link>
                 <NavDropdown
                   title="Dropdown"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
