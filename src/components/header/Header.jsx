@@ -18,7 +18,7 @@ const Header = () => {
     <header className="header">
       <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+          <Link className="navbar-brand" to={'/'}>Navbar Offcanvas</Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
@@ -32,21 +32,15 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link>
-                  <Link className="nav_link" to={"/"}>
-                    Home
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav_link" to={"/cardapio"}>
-                    Cardapio
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="nav_link" to={"/sobre"}>
-                    Sobre
-                  </Link>
-                </Nav.Link>
+                <Link className="nav-link" to={"/"}>
+                  Home
+                </Link>
+                <Link className="nav-link" to={"/cardapio"}>
+                  Cardapio
+                </Link>
+                <Link className="nav-link" to={"/sobre"}>
+                  Sobre
+                </Link>
                 {/* 
                 <NavDropdown
                   title="Dropdown"
