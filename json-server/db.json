@@ -1,0 +1,126 @@
+{
+  "coffeeCards": [
+    {
+      "id": 1,
+      "title": "Título card 1",
+      "label": "Conteúdo de texto grande para os cards",
+      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 2,
+      "title": "Título card 2",
+      "label": "Conteúdo de texto grande para os cards",
+      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 3,
+      "title": "Título card 3",
+      "label": "Conteúdo de texto grande para os cards",
+      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 4,
+      "title": "Título card 4",
+      "label": "Conteúdo de texto grande para os cards",
+      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "       street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "bs": "harness real-time e-markets"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net",
+      "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "suite": "Suite 847",
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157",
+        "geo": {
+          "lat": "-68.6102",
+          "lng": "-47.0653"
+        }
+      },
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info",
+      "company": {
+        "name": "Romaguera-Jacobson",
+        "catchPhrase": "Face to face bifurcated interface",
+        "bs": "e-enable strategic applications"
+      }
+    }
+  ],
+  "coffeeCarousel": [
+    {
+      "image": "https://images.pexels.com/photos/4920855/pexels-photo-4920855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "alt": "Imagem de café 1",
+      "title": "Primeiro slide",
+      "label": "Café expresso número 1"
+    },
+    {
+      "image": "https://images.pexels.com/photos/11452185/pexels-photo-11452185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "alt": "Imagem de café 2",
+      "title": "Segundo slide",
+      "label": "Café expresso número 2"
+    },
+    {
+      "image": "https://images.pexels.com/photos/15447295/pexels-photo-15447295/free-photo-of-cappuccino-cafe-copo-taca.jpeg?auto=compress&",
+      "alt": "Imagem de café 3",
+      "title": "Terceiro slide",
+      "label": "Café expresso número 3"
+    }
+  ],
+  "coffeeMenu": [
+    {
+      "id": "1",
+      "title": "Título de teste",
+      "decription": "Descrição qualquer de um tipo de café"
+    }
+  ]
+}
