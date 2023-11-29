@@ -1,33 +1,57 @@
 import { Button, Form, Table } from 'react-bootstrap';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-import UsersData from '../../dataSet/UsersData';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Cardapio = () => {
-  const [filter, setFilter] = useState();
+  const [show, setShow] = useState(false);
+  const [users, setUsers] = useState(null);
+  const [data, setData] = useState({
+    name: '',
+    surname: '',
+  });
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    console.log(filter);
+  const handleChangeInput = (event) => {
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
+
+  const handleChangeModal = () => setShow(!show);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const getUsers = async () => {
+    await fetch('http://localhost:5000/users')
+      .then((res) => {
+        setUsers(res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <>
-      <Form onSubmit={onSubmit}>
+      <Button variant="primary" onClick={handleChangeModal} className="mb-3">
+        +
+      </Button>
+
+      <div className="mb-3">
         <Form.Group className="mb-3" controlId="formFilter">
-          <Form.Label>Buscar</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control
             type="text"
-            onChange={(event) => setFilter(event.target.value)}
+            name="name"
+            className="mb-3"
+            onChange={handleChangeInput}
             placeholder="Digite um alimento"
           />
+          <Button variant="primary" type="submit">
+            Consultar
+          </Button>
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Buscar
-        </Button>
-      </Form>
-      <Table striped bordered hover>
+      </div>
+
+      {/* <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
@@ -81,7 +105,7 @@ const Cardapio = () => {
             );
           })}
         </tbody>
-      </Table>
+      </Table> */}
     </>
   );
 };
