@@ -1,126 +1,49 @@
 {
-  "coffeeCards": [
+  "clientes": [
     {
       "id": 1,
-      "title": "Título card 1",
-      "label": "Conteúdo de texto grande para os cards",
-      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "nome": "João",
+      "sobrenome": "Silva",
+      "email": "js@mail.com",
+      "celular": "83988887777"
     },
     {
       "id": 2,
-      "title": "Título card 2",
-      "label": "Conteúdo de texto grande para os cards",
-      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "nome": "Maria",
+      "sobrenome": "Pereira",
+      "email": "mp@mail.com",
+      "celular": "83988886666"
     },
     {
-      "id": 3,
-      "title": "Título card 3",
-      "label": "Conteúdo de texto grande para os cards",
-      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-      "id": 4,
-      "title": "Título card 4",
-      "label": "Conteúdo de texto grande para os cards",
-      "image": "https://images.pexels.com/photos/1879321/pexels-photo-1879321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "nome": "Bruno",
+      "sobrenome": "Figueredo",
+      "email": "bruno.texte@gmail.com",
+      "celular": "9861112410",
+      "id": 3
     }
   ],
-  "users": [
+  "produtos": [],
+  "cardapios": [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "address": {
-        "       street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "titulo": "Café Expresso",
+      "descricao": "Café expresso preparado com café especial em grãos moído na hora.",
+      "imagem": "https://images.unsplash.com/photo-1620051730698-57645ec179fa?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "preco": "8.0"
     },
     {
       "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
-      },
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      }
+      "titulo": "Suco de laranja",
+      "descricao": "Suco puro preparadaro com laranjas super doces.",
+      "imagem": "https://images.unsplash.com/photo-1587015990127-424b954e38b5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3JhbmdlJTIwanVpY2V8ZW58MHx8MHx8fDA%3D",
+      "preco": "10.0"
     },
     {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
-    }
-  ],
-  "coffeeCarousel": [
-    {
-      "image": "https://images.pexels.com/photos/4920855/pexels-photo-4920855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "alt": "Imagem de café 1",
-      "title": "Primeiro slide",
-      "label": "Café expresso número 1"
-    },
-    {
-      "image": "https://images.pexels.com/photos/11452185/pexels-photo-11452185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "alt": "Imagem de café 2",
-      "title": "Segundo slide",
-      "label": "Café expresso número 2"
-    },
-    {
-      "image": "https://images.pexels.com/photos/15447295/pexels-photo-15447295/free-photo-of-cappuccino-cafe-copo-taca.jpeg?auto=compress&",
-      "alt": "Imagem de café 3",
-      "title": "Terceiro slide",
-      "label": "Café expresso número 3"
-    }
-  ],
-  "coffeeMenu": [
-    {
-      "id": "1",
-      "title": "Título de teste",
-      "decription": "Descrição qualquer de um tipo de café"
+      "titulo": "Café Preto",
+      "imagem": "https://assets.delirec.com/images%2FezvX2clyQIYiWF3AAjQDXT2Xt6q2%2Frecipe%2Feb175f30-1278-4944-adcd-b8974ada7853-Caf%C3%A9--preto.-gallery-0",
+      "preco": "4,00",
+      "descricao": "Café que é fabricado sem aditivos. O café preto, quando preparado corretamente, deve ser um pouco mais amargo do que o café que tem algo adicionado a ele.",
+      "id": 3
     }
   ]
 }

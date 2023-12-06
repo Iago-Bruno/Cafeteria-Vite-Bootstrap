@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Home from "./pages/home/Home.jsx";
 import Cardapio from "./pages/cardapio/Cardapio.jsx";
 import About from "./pages/sobre/About.jsx";
+import Cliente from "./pages/cliente/Cliente.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/cardapio",
         element: <Cardapio />,
+      },
+      {
+        path: "/clientes",
+        element: <Cliente />,
       },
       {
         path: "/sobre",

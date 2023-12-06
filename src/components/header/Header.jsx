@@ -1,12 +1,4 @@
-import {
-  Container,
-  Nav,
-  Navbar,
-  Offcanvas,
-  NavDropdown,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "./Header.css";
@@ -15,58 +7,27 @@ const Header = () => {
   const expand = true;
 
   return (
-    <header className="header">
-      <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
-        <Container fluid>
-          <Link className="navbar-brand" to={'/'}>Navbar Offcanvas</Link>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-          <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-${expand}`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-            placement="end"
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Offcanvas
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Link className="nav-link" to={"/"}>
-                  Home
-                </Link>
-                <Link className="nav-link" to={"/cardapio"}>
-                  Cardapio
-                </Link>
-                <Link className="nav-link" to={"/sobre"}>
-                  Sobre
-                </Link>
-                {/* 
-                <NavDropdown
-                  title="Dropdown"
-                  id={`offcanvasNavbarDropdown-expand-${expand}`}
-                >
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown> */}
-              </Nav>
-              {/* <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form> */}
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
+    <header>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/home">Salento</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Link className="nav-link" to={"/"}>
+                Home
+              </Link>
+              <Link className="nav-link" to={"/cardapio"}>
+                Cardápio
+              </Link>
+              <Link className="nav-link" to={"/clientes"}>
+                Cliente
+              </Link>
+              <Link className="nav-link" to={"/sobre"}>
+                Sobre
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </header>
